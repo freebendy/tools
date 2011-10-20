@@ -1,0 +1,10 @@
+http://progit.org/book/zh/
+http://roclinux.cn/?cat=72
+http://www.linuxeden.com/html/develop/20100612/103365.html
+http://blog.longwin.com.tw/2009/05/git-learn-initial-command-2009/
+
+http://wyj.zhuwo.info/2011/04/git-cherry-pick-merge-rebase/
+
+
+repo使用
+http://blog.ossxp.com/2010/10/2009/
