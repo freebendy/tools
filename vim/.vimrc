@@ -4,9 +4,19 @@ set history=50 "历史记录50条
 set fenc=utf-8 "设置默认语言为8位unicode
 "man Q gq "屏蔽Q, 以免进入Ex模式
 filetype on "打开文件类型检测
-
+set cursorline "高亮当前行
+"配置高亮颜色
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white 
 "set hls "查找文本高亮
 set nu
+"显示tab和换行
+"set list
+"tab用>---表示，空格用-表示
+"set listchars=tab:>-,trail:-
+"set nolist
+
+
 
 "格式设置
 set autoindent	"自动缩进
@@ -92,6 +102,7 @@ let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
+let Tlist_GainFocus_On_ToggleOpen=1      "打开taglist，焦点跳转到taglist
 "let Tlist_Auto_Open=1                "自动打开taglist
 "let Tlist_Inc_Winwidth=30
 "let Tlist_Sort_Type='name'             "根据名字排序，默认是根据出现的顺序

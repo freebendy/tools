@@ -1,6 +1,11 @@
 抓取网站：
     wget -m -r -k URL
 
+查看USB设备：
+lsusb
+重启udev:
+sudo service udev restart
+
 
 1.
     cp -r src_dir des_dir 
