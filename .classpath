@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="packages/apps/AccountsAndSyncSettings/src"/>
+	<classpathentry kind="src" path="packages/apps/Bluetooth/src"/>
+	<classpathentry kind="src" path="packages/apps/Browser/src"/>
+	<classpathentry kind="src" path="packages/apps/Calendar/src"/>
+	<classpathentry kind="src" path="packages/apps/Calculator/src"/>
+	<classpathentry kind="src" path="packages/apps/Camera/src"/>
+	<classpathentry kind="src" path="packages/apps/CertInstaller/src"/>
+	<classpathentry kind="src" path="packages/apps/Contacts/src"/>
+	<classpathentry kind="src" path="packages/apps/DeskClock/src"/>
+	<classpathentry kind="src" path="packages/apps/Email/src"/>
+	<classpathentry kind="src" path="packages/apps/Gallery3D/src"/>
+	<classpathentry kind="src" path="packages/apps/HTMLViewer/src"/>
+	<classpathentry kind="src" path="packages/apps/Launcher2/src"/>
+	<classpathentry kind="src" path="packages/apps/Mms/src"/>
+	<classpathentry kind="src" path="packages/apps/PackageInstaller/src"/>
+	<classpathentry kind="src" path="packages/apps/Phone/src"/>
+	<classpathentry kind="src" path="packages/apps/QuickSearchBox/src"/>
+	<classpathentry kind="src" path="packages/apps/Provision/src"/>
+	<classpathentry kind="src" path="packages/apps/Settings/src"/>
+	<classpathentry kind="src" path="packages/apps/SoundRecorder/src"/>
+	<classpathentry kind="src" path="packages/apps/Stk/src"/>
+	<classpathentry kind="src" path="packages/apps/Tag/src"/>
+	<classpathentry kind="src" path="packages/apps/VoiceDialer/src"/>
+	<classpathentry kind="src" path="packages/providers/CalendarProvider/src"/>
+	<classpathentry kind="src" path="packages/providers/ContactsProvider/src"/>
+	<classpathentry kind="src" path="packages/providers/DownloadProvider/src"/>
+	<classpathentry kind="src" path="packages/providers/DrmProvider/src"/>
+	<classpathentry kind="src" path="packages/providers/MediaProvider/src"/>
+	<classpathentry kind="src" path="packages/providers/TelephonyProvider/src"/>
+	<!--classpathentry kind="src" path="frameworks/base/awt"/-->
+	<classpathentry kind="src" path="frameworks/base/cmds/am/src"/>
+	<classpathentry kind="src" path="frameworks/base/cmds/input/src"/>
+	<classpathentry kind="src" path="frameworks/base/cmds/pm/src"/>
+	<classpathentry kind="src" path="frameworks/base/cmds/svc/src"/>
+	<!-- classpathentry kind="src" path="frameworks/base/common/java"/-->
+	<classpathentry kind="src" path="frameworks/base/core/java"/>
+	<classpathentry kind="src" path="frameworks/base/core/config/sdk"/>
+	<classpathentry kind="src" path="frameworks/base/graphics/java"/>
+	<classpathentry kind="src" path="frameworks/base/keystore/java"/>
+	<classpathentry kind="src" path="frameworks/base/location/java"/>
+	<classpathentry kind="src" path="frameworks/base/media/java"/>
+	<classpathentry kind="src" path="frameworks/base/obex"/>
+	<classpathentry kind="src" path="frameworks/base/opengl/java"/>
+	<classpathentry kind="src" path="frameworks/base/packages/SettingsProvider/src"/>
+	<classpathentry kind="src" path="frameworks/base/policy/src"/>
+	<classpathentry kind="src" path="frameworks/base/sax/java"/>
+	<classpathentry kind="src" path="frameworks/base/services/java"/>
+	<classpathentry kind="src" path="frameworks/base/telephony/java"/>
+	<classpathentry kind="src" path="frameworks/base/test-runner/src"/>
+	<classpathentry kind="src" path="frameworks/base/voip/java"/>
+	<classpathentry kind="src" path="frameworks/base/vpn/java"/>
+	<classpathentry kind="src" path="frameworks/base/wifi/java"/>
+	<classpathentry kind="src" path="frameworks/base/fmradio/java"/>
+	<classpathentry kind="src" path="frameworks/ex/common/java"/>
+	<classpathentry kind="src" path="development/samples/ApiDemos/src"/>
+	<classpathentry kind="src" path="development/samples/ApiDemos/tests/src"/>
+	<classpathentry kind="src" path="development/samples/Compass/src"/>
+	<classpathentry kind="src" path="development/samples/HelloActivity/src"/>
+	<classpathentry kind="src" path="development/samples/HelloActivity/tests/src"/>
+	<classpathentry kind="src" path="development/samples/Home/src"/>
+	<classpathentry kind="src" path="development/samples/LunarLander/src"/>
+	<classpathentry kind="src" path="development/samples/LunarLander/tests/src"/>
+	<classpathentry kind="src" path="development/samples/NotePad/src"/>
+	<classpathentry kind="src" path="development/samples/NotePad/tests/src"/>
+	<classpathentry kind="src" path="development/samples/RSSReader/src"/>
+	<classpathentry kind="src" path="development/samples/SkeletonApp/src"/>
+	<classpathentry kind="src" path="development/samples/SkeletonApp/tests/src"/>
+	<classpathentry kind="src" path="development/samples/Snake/src"/>
+	<classpathentry kind="src" path="development/samples/Snake/tests/src"/>
+	<classpathentry kind="src" path="development/apps/Term/src"/>
+	<classpathentry kind="src" path="libcore/dalvik/src/main/java"/>
+	<classpathentry kind="src" path="libcore/icu/src/main/java"/>
+	<classpathentry kind="src" path="libcore/json/src/main/java"/>
+	<classpathentry kind="src" path="libcore/junit/src/main/java"/>
+	<classpathentry kind="src" path="libcore/luni/src/main/java"/>
+	<classpathentry kind="src" path="libcore/xml/src/main/java"/>
+	<classpathentry kind="src" path="out/target/common/R"/>
+	<classpathentry kind="src" path="out/target/common/obj/APPS/ApiDemos_intermediates/src/src"/>
+	<classpathentry kind="src" path="out/target/common/obj/APPS/Browser_intermediates/src/src"/>
+	<classpathentry kind="src" path="out/target/common/obj/APPS/CalendarProvider_intermediates/src/src"/>
+	<classpathentry kind="src" path="out/target/common/obj/APPS/ContactsProvider_intermediates/src/src"/>
+	<classpathentry kind="src" path="out/target/common/obj/APPS/Email_intermediates/src/src"/>
+	<classpathentry kind="src" path="out/target/common/obj/APPS/Music_intermediates/src/src"/>
+	<classpathentry kind="src" path="out/target/common/obj/APPS/Phone_intermediates/src/src"/>
+	<classpathentry kind="src" path="out/target/common/obj/APPS/QuickSearchBox_intermediates/src/src"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/core/java"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/location/java"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/media/java"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/telephony/java"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/voip/java"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/vpn/java"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/wifi/java"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/fmradio/java"/>
+	<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/services_intermediates/src"/>
+	<classpathentry kind="src" path="external/tagsoup/src"/>
+	<classpathentry kind="src" path="external/apache-http/src"/>
+	<classpathentry kind="src" path="external/bouncycastle/src/main/java"/>
+	<classpathentry kind="src" path="external/nist-sip/java"/>
+	<!-- classpathentry kind="lib" path="out/target/common/obj/JAVA_LIBRARIES/google-common_intermediates/javalib.jar"/-->
+	<!-- classpathentry kind="lib" path="out/target/common/obj/JAVA_LIBRARIES/gsf-client_intermediates/javalib.jar"-->
+	<!-- classpathentry kind="lib" path="out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/javalib.jar"/-->
+	<classpathentry kind="lib" path="packages/apps/Calculator/arity-2.1.2.jar"/>
+	<classpathentry kind="output" path="out/target/common/obj/JAVA_LIBRARIES/android_stubs_current_intermediates/classes"/>
+	<classpathentry kind="src" path="cts/libs/vogar-expect/src"/>
+<classpathentry kind="src" path="cts/libs/annotation/src"/>
+<classpathentry kind="src" path="cts/libs/json/src"/>
+<classpathentry kind="src" path="cts/apps/CtsVerifier/tests/src"/>
+<classpathentry kind="src" path="cts/apps/CtsVerifier/src"/>
+<classpathentry kind="src" path="cts/tests/ApiDemosReferenceTest/src"/>
+<classpathentry kind="src" path="cts/tests/core/runner/src"/>
+<classpathentry kind="src" path="cts/tests/accessibilityservice/src"/>
+<classpathentry kind="src" path="cts/tests/SignatureTest/tests/src"/>
+<classpathentry kind="src" path="cts/tests/SignatureTest/src"/>
+<classpathentry kind="src" path="cts/tests/tests/content/src"/>
+<classpathentry kind="src" path="cts/tests/tests/util/src"/>
+<classpathentry kind="src" path="cts/tests/tests/media/src"/>
+<classpathentry kind="src" path="cts/tests/tests/sax/src"/>
+<classpathentry kind="src" path="cts/tests/tests/provider/src"/>
+<classpathentry kind="src" path="cts/tests/tests/accessibilityservice/src"/>
+<classpathentry kind="src" path="cts/tests/tests/performance4/src"/>
+<classpathentry kind="src" path="cts/tests/tests/view/src"/>
+<classpathentry kind="src" path="cts/tests/tests/app/src"/>
+<classpathentry kind="src" path="cts/tests/tests/performance2/src"/>
+<classpathentry kind="src" path="cts/tests/tests/location/src"/>
+<classpathentry kind="src" path="cts/tests/tests/speech/src"/>
+<classpathentry kind="src" path="cts/tests/tests/performance5/src"/>
+<classpathentry kind="src" path="cts/tests/tests/performance/src"/>
+<classpathentry kind="src" path="cts/tests/tests/preference/src"/>
+<classpathentry kind="src" path="cts/tests/tests/telephony/src"/>
+<classpathentry kind="src" path="cts/tests/tests/example/src"/>
+<classpathentry kind="src" path="cts/tests/tests/performance3/src"/>
+<classpathentry kind="src" path="cts/tests/tests/os/src"/>
+<classpathentry kind="src" path="cts/tests/tests/widget/src"/>
+<classpathentry kind="src" path="cts/tests/tests/permission2/src"/>
+<classpathentry kind="src" path="cts/tests/tests/text/src"/>
+<classpathentry kind="src" path="cts/tests/tests/database/src"/>
+<classpathentry kind="src" path="cts/tests/tests/dpi2/src"/>
+<classpathentry kind="src" path="cts/tests/tests/jni/src"/>
+<classpathentry kind="src" path="cts/tests/tests/accounts/src"/>
+<classpathentry kind="src" path="cts/tests/tests/hardware/src"/>
+<classpathentry kind="src" path="cts/tests/tests/dpi/src"/>
+<classpathentry kind="src" path="cts/tests/tests/net/src"/>
+<classpathentry kind="src" path="cts/tests/tests/gesture/src"/>
+<classpathentry kind="src" path="cts/tests/tests/webkit/src"/>
+<classpathentry kind="src" path="cts/tests/tests/ndef/src"/>
+<classpathentry kind="src" path="cts/tests/tests/permission/src"/>
+<classpathentry kind="src" path="cts/tests/tests/graphics/src"/>
+<classpathentry kind="src" path="cts/tests/tests/bluetooth/src"/>
+<classpathentry kind="src" path="cts/tests/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/PermissionDeclareApp/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/AppAccessData/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/SimpleAppInstallDiffCert/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/SharedUidInstallDiffCert/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/TargetInstrumentationApp/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/AppWithData/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/SimpleAppInstall/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/UsePermissionDiffCert/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/SharedUidInstall/src"/>
+<classpathentry kind="src" path="cts/tests/appsecurity-tests/test-apps/InstrumentationAppDiffCert/src"/>
+<classpathentry kind="src" path="cts/tests/ProcessTest/ShareUidApp/src"/>
+<classpathentry kind="src" path="cts/tests/ProcessTest/src"/>
+<classpathentry kind="src" path="cts/tests/ProcessTest/NoShareUidApp/src"/>
+<classpathentry kind="src" path="cts/tools/test-progress-new/src"/>
+<classpathentry kind="src" path="cts/tools/spec-progress/src"/>
+<classpathentry kind="src" path="cts/tools/vm-tests/src"/>
+<classpathentry kind="src" path="cts/tools/cts-reference-app-lib/src"/>
+<classpathentry kind="src" path="cts/tools/test-progress/src"/>
+<classpathentry kind="src" path="cts/tools/cts-api-coverage/src"/>
+<classpathentry kind="src" path="cts/tools/dx-tests/src"/>
+<classpathentry kind="src" path="cts/tools/device-setup/TestDeviceSetup/src"/>
+<classpathentry kind="src" path="cts/tools/annotation-helper/src"/>
+<classpathentry kind="src" path="cts/tools/tradefed-host/tests/src"/>
+<classpathentry kind="src" path="cts/tools/tradefed-host/src"/>
+<classpathentry kind="src" path="cts/tools/dex-tools/src"/>
+<classpathentry kind="src" path="cts/tools/dasm/src"/>
+<classpathentry kind="src" path="cts/tools/host/src"/>
+<classpathentry kind="src" path="cts/tools/signature-tools/src"/>
+<classpathentry kind="src" path="dalvik/hit/src"/>
+<classpathentry kind="src" path="dalvik/tests/002-sleep/src"/>
+<classpathentry kind="src" path="dalvik/tests/077-method-override/src"/>
+<classpathentry kind="src" path="dalvik/tests/032-concrete-sub/src"/>
+<classpathentry kind="src" path="dalvik/tests/033-class-init-deadlock/src"/>
+<classpathentry kind="src" path="dalvik/tests/070-nio-buffer/src"/>
+<classpathentry kind="src" path="dalvik/tests/005-args/src"/>
+<classpathentry kind="src" path="dalvik/tests/040-miranda/src"/>
+<classpathentry kind="src" path="dalvik/tests/042-new-instance/src"/>
+<classpathentry kind="src" path="dalvik/tests/022-interface/src"/>
+<classpathentry kind="src" path="dalvik/tests/041-narrowing/src"/>
+<classpathentry kind="src" path="dalvik/tests/056-const-string-jumbo/src"/>
+<classpathentry kind="src" path="dalvik/tests/061-out-of-memory/src"/>
+<classpathentry kind="src" path="dalvik/tests/026-access/src"/>
+<classpathentry kind="src" path="dalvik/tests/037-inherit/src"/>
+<classpathentry kind="src" path="dalvik/tests/020-string/src"/>
+<classpathentry kind="src" path="dalvik/tests/047-returns/src"/>
+<classpathentry kind="src" path="dalvik/tests/009-instanceof2/src"/>
+<classpathentry kind="src" path="dalvik/tests/029-assert/src"/>
+<classpathentry kind="src" path="dalvik/tests/031-class-attributes/src"/>
+<classpathentry kind="src" path="dalvik/tests/038-inner-null/src"/>
+<classpathentry kind="src" path="dalvik/tests/027-arithmetic/src"/>
+<classpathentry kind="src" path="dalvik/tests/006-count10/src"/>
+<classpathentry kind="src" path="dalvik/tests/066-mismatched-super/src"/>
+<classpathentry kind="src" path="dalvik/tests/079-phantom/src"/>
+<classpathentry kind="src" path="dalvik/tests/019-wrong-array-type/src"/>
+<classpathentry kind="src" path="dalvik/tests/055-enum-performance/src"/>
+<classpathentry kind="src" path="dalvik/tests/057-iteration-performance/src"/>
+<classpathentry kind="src" path="dalvik/tests/059-finalizer-throw/src"/>
+<classpathentry kind="src" path="dalvik/tests/054-uncaught/src"/>
+<classpathentry kind="src" path="dalvik/tests/050-sync-test/src"/>
+<classpathentry kind="src" path="dalvik/tests/043-privates/src"/>
+<classpathentry kind="src" path="dalvik/tests/071-dexfile/src"/>
+<classpathentry kind="src" path="dalvik/tests/046-reflect/src"/>
+<classpathentry kind="src" path="dalvik/tests/024-illegal-access/src"/>
+<classpathentry kind="src" path="dalvik/tests/072-precise-gc/src"/>
+<classpathentry kind="src" path="dalvik/tests/016-intern/src"/>
+<classpathentry kind="src" path="dalvik/tests/086-null-super/src"/>
+<classpathentry kind="src" path="dalvik/tests/039-join-main/src"/>
+<classpathentry kind="src" path="dalvik/tests/051-thread/src"/>
+<classpathentry kind="src" path="dalvik/tests/049-show-object/src"/>
+<classpathentry kind="src" path="dalvik/tests/018-stack-overflow/src"/>
+<classpathentry kind="src" path="dalvik/tests/048-server-socket/src"/>
+<classpathentry kind="src" path="dalvik/tests/083-jit-regressions/src"/>
+<classpathentry kind="src" path="dalvik/tests/084-class-init/src"/>
+<classpathentry kind="src" path="dalvik/tests/062-character-encodings/src"/>
+<classpathentry kind="src" path="dalvik/tests/021-string2/src"/>
+<classpathentry kind="src" path="dalvik/tests/007-exceptions/src"/>
+<classpathentry kind="src" path="dalvik/tests/013-math2/src"/>
+<classpathentry kind="src" path="dalvik/tests/044-proxy/src"/>
+<classpathentry kind="src" path="dalvik/tests/074-gc-thrash/src"/>
+<classpathentry kind="src" path="dalvik/tests/068-classloader/src"/>
+<classpathentry kind="src" path="dalvik/tests/035-enum/src"/>
+<classpathentry kind="src" path="dalvik/tests/003-omnibus-opcodes/src"/>
+<classpathentry kind="src" path="dalvik/tests/064-field-access/src"/>
+<classpathentry kind="src" path="dalvik/tests/053-wait-some/src"/>
+<classpathentry kind="src" path="dalvik/tests/067-preemptive-unpark/src"/>
+<classpathentry kind="src" path="dalvik/tests/078-polymorphic-virtual/src"/>
+<classpathentry kind="src" path="dalvik/tests/011-array-copy/src"/>
+<classpathentry kind="src" path="dalvik/tests/014-math3/src"/>
+<classpathentry kind="src" path="dalvik/tests/073-mismatched-field/src"/>
+<classpathentry kind="src" path="dalvik/tests/063-process-manager/src"/>
+<classpathentry kind="src" path="dalvik/tests/045-reflect-array/src"/>
+<classpathentry kind="src" path="dalvik/tests/012-math/src"/>
+<classpathentry kind="src" path="dalvik/tests/084-old-style-inner-class/src"/>
+<classpathentry kind="src" path="dalvik/tests/017-float/src"/>
+<classpathentry kind="src" path="dalvik/tests/081-hot-exceptions/src"/>
+<classpathentry kind="src" path="dalvik/tests/010-instance/src"/>
+<classpathentry kind="src" path="dalvik/tests/076-boolean-put/src"/>
+<classpathentry kind="src" path="dalvik/tests/028-array-write/src"/>
+<classpathentry kind="src" path="dalvik/tests/008-instanceof/src"/>
+<classpathentry kind="src" path="dalvik/tests/004-annotations/src"/>
+<classpathentry kind="src" path="dalvik/tests/036-finalizer/src"/>
+<classpathentry kind="src" path="dalvik/tests/052-verifier-fun/src"/>
+<classpathentry kind="src" path="dalvik/tests/065-mismatched-implements/src"/>
+<classpathentry kind="src" path="dalvik/tests/080-oom-throw/src"/>
+<classpathentry kind="src" path="dalvik/tests/087-gc-after-link/src"/>
+<classpathentry kind="src" path="dalvik/tests/015-switch/src"/>
+<classpathentry kind="src" path="dalvik/tests/069-field-type/src"/>
+<classpathentry kind="src" path="dalvik/tests/082-inline-execute/src"/>
+<classpathentry kind="src" path="dalvik/tests/034-call-null/src"/>
+<classpathentry kind="src" path="dalvik/tests/075-verification-error/src"/>
+<classpathentry kind="src" path="dalvik/tests/030-bad-finalizer/src"/>
+<classpathentry kind="src" path="dalvik/tests/025-access-controller/src"/>
+<classpathentry kind="src" path="dalvik/tests/023-many-interfaces/src"/>
+<classpathentry kind="src" path="dalvik/tests/058-enum-order/src"/>
+<classpathentry kind="src" path="frameworks/base/vpn/tests/vpntests/src"/>
+<classpathentry kind="src" path="frameworks/base/libs/usb/tests/AccessoryChat/src"/>
+<classpathentry kind="src" path="frameworks/base/keystore/tests/src"/>
+<classpathentry kind="src" path="frameworks/base/media/tests/MediaFrameworkTest/src"/>
+<classpathentry kind="src" path="frameworks/base/media/tests/SoundPoolTest/src"/>
+<classpathentry kind="src" path="frameworks/base/services/tests/servicestests/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/coretests/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/coretests/EnabledTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/coretests/DisabledTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/ConnectivityManagerTest/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalLocVersionedTestApp_v1/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/UpdateExternalLocTestApp_v1_ext/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/VersatileTestApp_Internal/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/SimpleTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/UpdateExternalLocTestApp_v2_none/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/VersatileTestApp_None/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalLocAllPermsTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/UpdateExtToIntLocTestApp_v1_ext/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalSharedPerms/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/AutoLocTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalLocVersionedTestApp_v2/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalSharedPermsBT/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/NoLocVersionedTestApp_v2/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/VersatileTestApp_External/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/InternalLocTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/AutoLocVersionedTestApp_v2/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/NoLocVersionedTestApp_v1/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/AutoLocVersionedTestApp_v1/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/NoLocTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/DownloadManagerTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalSharedPermsFL/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalLocPermsFLTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/UpdateExtToIntLocTestApp_v2_int/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/VersatileTestApp_Auto/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalLocTestApp/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/hosttests/test-apps/ExternalSharedPermsDiffKey/src"/>
+<classpathentry kind="src" path="frameworks/base/core/tests/utillib/src"/>
+<classpathentry kind="src" path="frameworks/base/sax/tests/saxtests/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/appwidgets/AppWidgetHostTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/appwidgets/AppWidgetProviderTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/ImfTest/tests/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/ImfTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/FixVibrateSetting/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/TransformTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/LocationTracker/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/backup/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/DpiTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/LargeAssetTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/BrowserPowerTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/LotsOfApps/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/DumpRenderTree/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/LowStorageTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/BatteryWaster/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/StatusBar/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/BrowserTestPlugin/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/SmokeTest/tests/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/SmokeTest/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/permission/src"/>
+<classpathentry kind="src" path="frameworks/base/tests/SslLoad/src"/>
+<classpathentry kind="src" path="frameworks/base/location/tests/locationtests/src"/>
+<classpathentry kind="src" path="frameworks/base/telephony/tests/telephonytests/src"/>
+<classpathentry kind="src" path="frameworks/base/policy/tests/src"/>
+<classpathentry kind="src" path="frameworks/base/opengl/tests/gl_jni/src"/>
+<classpathentry kind="src" path="frameworks/base/opengl/tests/lighting1709/src"/>
+<classpathentry kind="src" path="frameworks/base/opengl/tests/testPauseResume/src"/>
+<classpathentry kind="src" path="frameworks/base/opengl/tests/gl2_java/src"/>
+<classpathentry kind="src" path="frameworks/base/opengl/tests/gldual/src"/>
+<classpathentry kind="src" path="frameworks/base/opengl/tests/gl2_jni/src"/>
+<classpathentry kind="src" path="frameworks/base/opengl/tools/glgen/src"/>
+<classpathentry kind="src" path="frameworks/base/tools/layoutlib/bridge/tests/src"/>
+<classpathentry kind="src" path="frameworks/base/graphics/tests/graphicstests/src"/>
+<classpathentry kind="src" path="frameworks/base/test-runner/tests/src"/>
+<classpathentry kind="src" path="frameworks/base/test-runner/src"/>
+<classpathentry kind="src" path="frameworks/ex/common/tests/src"/>
+<classpathentry kind="src" path="packages/apps/QuickSearchBox/tests/partial/src"/>
+<classpathentry kind="src" path="packages/apps/QuickSearchBox/tests/src"/>
+<classpathentry kind="src" path="packages/apps/QuickSearchBox/tests/slow/src"/>
+<classpathentry kind="src" path="packages/apps/QuickSearchBox/tests/spammy/src"/>
+<classpathentry kind="src" path="packages/apps/Music/tests/src"/>
+<classpathentry kind="src" path="packages/apps/DeskClock/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Settings/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Gallery/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Contacts/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Phone/tests/src"/>
+<classpathentry kind="src" path="packages/apps/VoiceDialer/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Browser/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Tag/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Calendar/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Gallery3D/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Email/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Mms/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Camera/tests/src"/>
+<classpathentry kind="src" path="packages/apps/Calculator/tests/src"/>
+<classpathentry kind="src" path="packages/inputmethods/LatinIME/tests/src"/>
+<classpathentry kind="src" path="packages/providers/CalendarProvider/tests/src"/>
+<classpathentry kind="src" path="packages/providers/ContactsProvider/tests/src"/>
+<classpathentry kind="src" path="packages/providers/DownloadProvider/tests/public_api_access/src"/>
+<classpathentry kind="src" path="packages/providers/DownloadProvider/tests/src"/>
+<classpathentry kind="src" path="packages/providers/DownloadProvider/tests/permission/src"/>
+<classpathentry kind="src" path="packages/experimental/StrictModeTest/src"/>
+<classpathentry kind="src" path="libcore/xml/src"/>
+<classpathentry kind="src" path="libcore/luni/src"/>
+<classpathentry kind="src" path="libcore/dalvik/src"/>
+<classpathentry kind="src" path="libcore/sqlite-jdbc/src"/>
+<classpathentry kind="src" path="libcore/icu/src"/>
+<classpathentry kind="src" path="libcore/json/src"/>
+<classpathentry kind="src" path="libcore/dom/src"/>
+<classpathentry kind="src" path="libcore/support/src"/>
+<classpathentry kind="src" path="libcore/junit/src"/>
+<classpathentry kind="src" path="out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/core/java"/>
+</classpath>
