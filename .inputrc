@@ -1,0 +1,6 @@
+#don't show hidden files in the list
+#set match-hidden-files off
+ 
+# auto complete ignoring case
+set show-all-if-ambiguous on
+set completion-ignore-case on
