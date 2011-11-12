@@ -44,3 +44,36 @@ Shell
 
 也有少数例外，通常是系统程序
 /etc/bash.bashrc /home/user/.bashrc
+
+查看CPU信息
+cat /proc/cpuinfo
+
+显示当前硬件信息
+sudo lshw > log.txt
+
+获取CPU序列号或者主板序列号
+#CPU ID
+sudo dmidecode -t 4 | grep ID
+#Serial Number
+sudo dmidecode  | grep  Serial
+#CPU
+sudo dmidecode -t 4
+#BIOS
+sudo dmidecode -t 0
+#主板：
+sudo dmidecode -t 2
+#OEM:
+sudo dmidecode -t 11
+
+查看硬盘温度
+sudo apt-get install hddtemp
+sudo hddtemp /dev/sda 
+
+
+如何查看主板信息：lspci 
+如何查看硬盘型号信息：ls /proc/ide #(IDE硬盘) 或者 ls /proc/scsi #(SCSI硬盘)
+如何查看内存信息：cat /proc/meminfo 
+如何查看显卡信息：lspci | grep VGA 
+如何查看系统版本号：lsb_release -a
+
+
