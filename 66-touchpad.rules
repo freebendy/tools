@@ -1,0 +1,4 @@
+# disable the touchpad when inserted a usb mouse
+# should be linked to /etc/udev/rules.d/01-touchpad.rules
+ACTION=="add", SUBSYSTEM=="input", ID_CLASS=="mouse", RUN+="/usr/bin/synclient TouchpadOff=1"
+ACTION=="remove", SUBSYSTEM=="input", ID_CLASS=="mouse", RUN+="/usr/bin/synclient TouchpadOff=0" 
