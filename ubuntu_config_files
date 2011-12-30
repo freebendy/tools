@@ -1,3 +1,8 @@
+切换登录管理器
+sudo dpkg-reconfigure gdm
+
+shell忽略大小写
+
 全局配置文件
 ------------
 系统初始化
