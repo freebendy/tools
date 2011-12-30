@@ -1,3 +1,7 @@
+linux源码：
+    make tags
+    make cscope
+
 Vim 常用快捷键：
     4个方向:
        k
