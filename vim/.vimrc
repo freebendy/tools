@@ -16,7 +16,7 @@ set nu
 "set listchars=tab:>-,trail:-
 "set nolist
 
-
+"color evening "在/usr/share/vim/vim73/colors/下
 
 "格式设置
 set autoindent	"自动缩进
@@ -111,3 +111,14 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 
 "Tagbar
 "let g:tagbar_autoshowtag = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OmniCppComplete -- depends on ctags
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocp  
+filetype plugin on 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SuperTab
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:SuperTabDefaultCompletionType="context"
