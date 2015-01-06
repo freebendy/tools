@@ -43,6 +43,14 @@ set incsearch				" 搜索中匹配
 "避免粘贴的时候自动增加缩进
 set pastetoggle=<F3>
 
+" dislay tab and white space
+set list
+" set the style of tab and white space: tab->"|", tail white space->"-"
+set lcs=tab:\|\ ,nbsp:%,trail:-
+" set the tab at the begininng of line as gray
+highlight LeaderTab guifg=#666666
+" match the tab at the beginning of line
+match LeaderTab /^\t/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope setting
