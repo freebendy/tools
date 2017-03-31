@@ -4,3 +4,18 @@
 # auto complete ignoring case
 set show-all-if-ambiguous on
 set completion-ignore-case on
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
+set meta-flag on
+set input-meta on
+set convert-meta off 
+set output-meta on
+"\e[5~": beginning-of-history
+"\e[6~": end-of-history
+"\e[2~": quoted-insert
+"\e[5C": forward-word
+"\e[5D": backward-word
