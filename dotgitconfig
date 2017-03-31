@@ -1,0 +1,31 @@
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	# show tha added/deleted lines for each files
+	ls = log --numstat --color --decorate
+	ci = commit
+	show-files = show --name-only
+[user]
+	name = <MY NAME>
+	email = <MY EMAIL>
+[core]
+	autocrlf = input
+	pager = less -x1,5
+	editor = vim
+[color]
+	ui = true
+	status = auto
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 453x160+65+24
+	main-window-view = FileView
+	history-view-vpane-position = 677
+	file-view-vpane-position = 912
+	show-graph = true
+[push]
+	default = nothing
+[credential]
+	helper = store
