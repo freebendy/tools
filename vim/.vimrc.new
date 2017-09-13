@@ -22,6 +22,7 @@ execute pathogen#infect()
 " - vim-autopep8
 " - vim-fugitive
 " - vim-snippets
+" - vim-conque
 " - exuberant-ctags
 
 " enable syntax highlighting, use ':highlight' to select hightlighting
@@ -64,7 +65,7 @@ set wrapscan
 " highlight current line
 set cursorline
 " highlight current column
-set cursorcolumn
+"set cursorcolumn
 
 " enable auto indent: use indent from previous line
 set autoindent
@@ -185,6 +186,8 @@ let g:syntastic_auto_loc_list=2
 let g:syntastic_check_on_open=1
 " syntax checks whenever buffers are written to disk, default is 1
 let g:syntastic_check_on_wq=1
+let g:syntastic_cpp_compiler='g++'
+let g:syntastic_cpp_compiler_options='-std=c++11'
 
 
 " shortcut for tagbar
@@ -243,7 +246,7 @@ let g:DoxygenToolkit_authorName="Ben Guan <Ben.Guan@cn.bosch.com>"
 
 
 " setting for vim-indent-guides
-let g:indent_guides_enable_on_vim_startup=1     " enable when vim starts
+"let g:indent_guides_enable_on_vim_startup=1     " enable when vim starts
 let g:indent_guides_start_level=2               " show visual indent from level 2
 let g:indent_guides_guide_size=1                " color block width
 " on/off visual indent
@@ -279,4 +282,3 @@ nmap <silent> <Leader>sw :FSHere<cr>
 " YCM settings
 "nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 "nnoremap <Leader>jd :YcmCompleter GoToDefinition<CR>
-
