@@ -1,6 +1,6 @@
 ﻿# Concept
 ## layer
-The OpenEmbedded build system supports organizing Metadata into multiple layers. Layers allow you to isolate different types of customizations from each other. You might find it tempting to keep everything in one layer when working on a single project. However, the more modular your Metadata, the easier it is to cope with future changes. 
+The OpenEmbedded build system supports organizing Metadata into multiple layers. Layers allow you to isolate different types of customizations from each other. You might find it tempting to keep everything in one layer when working on a single project. However, the more modular your Metadata, the easier it is to cope with future changes.
 
 References:
 - http://www.yoctoproject.org/docs/2.3/dev-manual/dev-manual.html#understanding-and-creating-layers
@@ -42,7 +42,7 @@ Produced by the OpenEmbedded build system are compressed forms of the root files
 - http://www.yoctoproject.org/docs/2.3/dev-manual/dev-manual.html#usingpoky-extend-customimage
 
 # Commands
-Show the package dependency for image: `bitbake <image > -g -u depexp`
+Show the package dependency for image: `bitbake <image > -g -u taskexp`
 
 Open a new shell where with neccesary system values already defined for package: `bitbake <package> -c  devshell`
 
@@ -84,6 +84,9 @@ Generate package dependency： `bitbake -g <target>` (pn-buildlist, pn-depends.d
 
 Increse debug level via adding option `D`, .e.g. `-DDD`
 
+# License
+License of a image: `tmp/deploy/<IMAGE>-<MACHINE>-<TIMESTAMP>/`
+License of a recipe: `<WORKDIR>/pkgdata/runtime/<PACKAGE_NAME>`
 
 # Notes
 
@@ -115,13 +118,13 @@ Directories:
 - D: (${WORKDIR}/image)
 - B: diretort for object files, same as `S` by defauly
 - DEPLOY_DIR: ${TMPDIR}/deploy
-- THISDIR: The directory in which the file BitBake is currently parsing is located. Do not manually set this variable. 
+- THISDIR: The directory in which the file BitBake is currently parsing is located. Do not manually set this variable.
 
 Layers：
 - Distro layer - Distribution Layers provide top-level or general policies for the image or SDK being built.
 - BSP layer - Board Support Package (BSP) layers provide machine configurations. This type of information is specific to a particular target architecture.
 - Software layer - Software layers contain user-supplied recipe files, patches, and append files.
-    
+
 BitBake handles the parsing and execution of the data files:
 - Recipes: Provides details about particular pieces of software. (.bb)
 - Class Data: Abstracts common build information (e.g. how to build a Linux kernel).(.bbclass)
@@ -135,7 +138,7 @@ Directory hierarchy：
 
 The name of recipe cannot contain "_", because "_" is used to seprate ${PN} and ${PV}
 
-BBFILE_PRIORITY: 
+BBFILE_PRIORITY:
 - 为每个layer中的recipe files(.bb文件)指定优先级。　值越大优先级越高。
 - 如果同一个recipe在多个layer中出现，设置这个变量会忽视recipe的版本号（PV,优先级相同会使用高版本号的recipe）
 - 如果没有指定这个变量，它的值会基于layer依赖。
@@ -167,7 +170,7 @@ LICENSE directory: stardard licenses are placed in meta/files/common-licenses/, 
 
 Features:
 - MACHINE_FEATURES: normally defined in the machine definition files
-- DISTRO_FEATURES: normally in meta*/conf/distro, e.g. poky/meta-yocto/conf/distro & poky/meta/conf/distro 
+- DISTRO_FEATURES: normally in meta*/conf/distro, e.g. poky/meta-yocto/conf/distro & poky/meta/conf/distro
 - IMAGE_FEATURES: (poky/meta/classes/core-image.bbclass)
 - COMBINED_FEATURES: Provides a list of hardware features that are enabled in both MACHINE_FEATURES and DISTRO_FEATURES.
 - CONFLICT_DISTRO_FEATURES: if the CONFLICT_DISTRO_FEATURES variable lists a feature that also appears in DISTRO_FEATURES within the current configuration, an error occurs and the build stops. (distro_features_check.bbclass)
@@ -179,8 +182,8 @@ Features:
 - 在meta/conf/bitbake.conf中定义IMAGE_ROOTFS_EXTRA_SPACE，可以在local.conf中使用这个配置来增加额外的空间
 - 直接在local.conf重新定义IMAGE_ROOTFS_SIZE的大小，原来定义在images/<TARGET>.bb 和meta/conf/bitbake.conf （默认65MB * 1.3）
 - http://guy.carpenter.id.au/chumby-oe/blog/2012/03/29/using-all-of-the-sd-card/ and http://wiki.chumby.com/index.php?title=Advanced_OpenEmbedded
-    
-    
+
+
 自定义image相关的几个重要文件：
 - 从/poky/meta/classes/core-image.bbclass继承
 - core-image.bbclass继承自image.bbclass
@@ -196,3 +199,59 @@ IMAGE_FSTYPES配置生成什么格式的根文件系统（poky/meta/classes/imag
 - KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
 - PREFERRED_PROVIDER_virtual/kernel = "linux-yocto"
 - PREFERRED_VERSION_linux-yocto = "4.9%"
+
+
+Python
+    recipes在以下目录： meta-openembedded/meta-python/recipes-devtools/python，poky/meta/recipes-devtools/python和meta-openembedded/meta-oe/recipes-devtools/python
+    package定义在poky/meta/recipes-devtools/python/python-2.7-manifest.inc，所以在CORE_IMAGE_EXTRA_INSTALL添加package时要根据这个列表
+
+
+tarball:
+    在poky/meta/recipes-core(主要是meta目录)下有一些生成tarball的recipe(find . -name "*tar*")
+
+
+build tool-chain:
+bitbake meta-toolchain
+bitbake [IMAGE] -c populate_sdk
+
+
+
+SystemV:
+    remote terminal在inittab中指定
+
+systemd:
+    http://0pointer.de/blog/projects/serial-console.html
+    /etc/systemd/*
+    /sys/class/tty/console/active
+    在内核配置设置CONFIG_FHANDLE=y
+
+init-ifupdown:
+    在packagegroup-core-boot.bb(/poky/meta/recipes-core/packagegroups/)中只有DISTRO_FEATURES中有sysvint才会把init-ifupdown打包到image中
+
+
+bitbake配置文件的包含顺序在poky/meta/conf/bitbake.conf中：
+
+
+
+使用了systemd后出现的问题：
+1. ttymxc1是通过kernel的参数设置的debug serial port, systemd默认会在/run/systemd/generator下生成serial-getty@ttymxc1.service来支持通过ttymxc1登陆到系统
+   ttymxc0是在mx6s_nanorisc_003i_012_sd.conf设置SERIAL_CONSOLE，systemd-serialgetty.bb会根据这个变量在/etc/systemd/system/getty.target.wants中生成相应的service链接
+   但是在系统启动后只有通过kernel参数设置的串口可以登陆到系统，通过SERIAL_CONSOLE或者在系统启动后用systemctl来enable的serial-getty都不能工作，但是其他程序如果要使用这个串口会出问题。
+   workaround: 把SERIAL_CONSOLE改称ttymxc1
+   OP: 没有找到为什么除了通过kernel参数设置的serial-getty外，其他的都不能正常工作
+
+
+2. 由udev-extraconf提供的automount不能工作，原因是: 在systemd 212以后， systemd-udevd守护进程回在另一个命名空间里运行，在里面进行的mount是“没效”的。
+   solution:
+   a. 更加systemd的方法是： 取出udev-extraconf,使用systemd.mount (要指定分区？)
+   b. 使用/etc/fstab, systemd会根据这个文件自动生成.mount (要指定分区？)
+   c. 在udev中使用SYSTEMD_WANTS来执行mount: http://mgampkay.github.io/posts/udev-automount.html
+   d. refer to:
+        MountFlags in http://www.freedesktop.org/software/systemd/man/systemd.exec.html
+        https://github.com/MentorEmbedded/meta-mentor/blob/master/meta-mel/recipes-core/systemd/systemd/0001-systemd-udevd-propagate-mounts-umounts-services-to-s.patch
+
+3. 设置ip地址的interfaces和一些脚本没有了，原因是init-ifupdown这个recipe只会跟sysVinit一起编译，在使用systemd的时候不会编译到image中。（poky/meta/recipes-core/packagegroups/packagegroup-core-boot.bb）
+   此外，解析interfaces的规则和脚本在udev-extraconf这个recipe里面
+   solution:
+   a. 保留udev-extraconf，手动增加init-ifupdown
+   b. 使用systemd.network来配置ip，这个需要systemd-networkd支持
