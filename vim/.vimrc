@@ -1,132 +1,298 @@
-"一般设置
-"set nocompatible "VIM而不是VI
-set history=50 "历史记录50条
-set fenc=utf-8 "设置默认语言为8位unicode
-"man Q gq "屏蔽Q, 以免进入Ex模式
-filetype on "打开文件类型检测
-set cursorline "高亮当前行
-"配置高亮颜色
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white 
-"set hls "查找文本高亮
+" for pathogen, enable pathogen
+execute pathogen#infect()
+
+" plugins installed via pathogen:
+" - vim-buftabline (or vim-airline, or bufexplorer)
+" - nerdcommenter
+" - nerdtree
+" - supertab
+" - syntastic
+" - tabbar
+" - vim-nerdtree-tabs
+" - vim-cpp-enhanced-highlight
+" - vim-fswitch
+" - vim-indent-guides
+
+" packages installed via 'apt-get':
+" - vim-youcompleteme
+" - vim-vimoutliner
+" - vim-syntastic
+" - vim-pathogen
+" - vim-addon-manager
+" - vim-autopep8
+" - vim-fugitive
+" - vim-snippets
+" - vim-conque
+" - exuberant-ctags
+
+" enable syntax highlighting, use ':highlight' to select hightlighting
+syntax enable
+
+" overrule customized setting with the defaults
+syntax on
+
+" colorcolumn
+set cc=80
+" :help ctermbg for color, for GVim. set guibg
+highlight ColorColumn ctermbg=0
+
+" show line number
 set nu
-"显示tab和换行
-"set list
-"tab用>---表示，空格用-表示
-"set listchars=tab:>-,trail:-
-"set nolist
 
-"color evening "在/usr/share/vim/vim73/colors/下
+" set file encoding, abbr. for 'fileencoding'
+set fenc=utf-8
 
-"格式设置
-set autoindent	"自动缩进
-set smartindent "智能缩进
-set cin			"C缩进 -- cindent
-set ts=4		"硬tab -- tabstop
-set sw=4		" 缩进空格数 -- shiftwidth
-set softtabstop=4			"软tab
-set expandtab				"空格替换tab
-set smarttab				"智能tab
+" enable filetype detection
+"filetype on
+" enable loading the indent file for detected types
+"filetype indent on
+" enable loading plugin files for detected types
+"filetype plugin on
+" == filetype on + filetype plugin on + filetype indent on
+filetype plugin indent on
 
-set nocompatible            " 关闭 vi 兼容模式
-"set autochdir               " 自动切换当前目录为当前文件所在的目录
-set tags=tags;				" ctags
-set incsearch               " 输入搜索内容时就显示搜索结果
-set hlsearch                " 搜索时高亮显示被找到的文本
-set nowrap                  " 不自动换行
-set magic					" 显示括号配对情况
+" highlight search
+set hlsearch
+" ignore case in search
+set ignorecase
+" only case-sensitive if the search word contain upper-case
+set smartcase
+set incsearch
+" disable wrap scan, enabled by default
+"set nowrapscan
+set wrapscan
 
-set showmatch				" 显示匹配
-set incsearch				" 搜索中匹配
+" highlight current line
+set cursorline
+" highlight current column
+"set cursorcolumn
 
-"Paste toggle - when pasting something in, don't indent.
-"避免粘贴的时候自动增加缩进
+" enable auto indent: use indent from previous line
+set autoindent
+" enable smart indent, like 'autoindent' but also recognize c syntax
+set smartindent
+" work more clever than 'autoindent' and 'smartindent', abbr of 'cindent'
+" it is configurable
+set cin
+
+" only use tab (not spaces) for indentation, space for alignment
+" - noexpandtab
+" - copyindent: copy the structure of the existing lines indent when
+"   autoindenting a new line
+" - preserveindent: when changing the indent of the current line, preserve as
+"   much of the indent structure as possible
+" - softtabstop=0
+" - shiftwitdth=4
+" - tabstop=4
+"set noet ci pi sts=0 sw=4 ts=4
+
+" number of spaces for a tab, abbr of 'tabstop'
+set ts=4
+" set the number of spaces for a expanding a tab, abbr of 'shiftwidth'
+set sw=4
+" treat continuous spaces as a tab
+set softtabstop=4
+" expand tab to space
+set expandtab
+" use shiftwidth instead of tabstop at the start of lines
+set smarttab
+set copyindent
+set preserveindent
+
+" no compatible with vi
+set nocompatible
+set nowrap
+set magic
+
+" reset the <leader> and timeout, use for shortcut
+let mapleader=","  " default is /
+set timeout timeoutlen=1500
+
+" show match bracket
+set showmatch
 set pastetoggle=<F3>
+
+"VIM console autocomplete
+set wildmenu
+set wildmode=list:longest,full
+
+" folding stype ('help: foldmethod'):
+" manual
+" indent
+" exp
+" syntax
+" dif
+" marker
+" zo, zc, za - open, close, toggle one folding level (at the cursor)
+" zO, zC, zA - open, close, toggle all folding level (at the cursor)
+set foldmethod=indent " fdm for short
+set foldcolumn=4 " fdc for short
+" default is 0 - open buffers with all folds closed,
+" set it to 99 - open buffers with no folds closed
+set foldlevel=9 " fdl for short
+" disable folding when vim starts
+"set nofoldenable " nofen for short
+
+" access system clipboard: '+y' or '*y'
+set clipboard=unnamedplus
+
+
+" enable mouse for all modes, refer ':help mouse'
+" in VIM 7.4, right click enable visual mode by default, so use 'mouse-=a'
+set mouse-=a
 
 " dislay tab and white space
 set list
+
 " set the style of tab and white space: tab->"|", tail white space->"-"
-set lcs=tab:\|\ ,nbsp:%,trail:-
+set lcs=tab:>-,trail:-,nbsp:%
+
 " set the tab at the begininng of line as gray
 highlight LeaderTab guifg=#666666
+
 " match the tab at the beginning of line
 match LeaderTab /^\t/
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" cscope setting
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("cscope")
-    set csprg=/usr/bin/cscope
-    set csto=1
-    set cst
-    set nocsverb
-    " add any database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out
-    endif
-    set csverb
+" set the style of statusline
+if has('statusline')
+    set laststatus=2
+    set statusline=%<%f\   " file name
+    set statusline+=%w%h%m%r " options
+    set statusline+=%{fugitive#statusline()} "Git
+    set statusline+=\ [%{&ff}/%Y]            " filetype
+    set statusline+=\ [%{getcwd()}]          " current dir
+    set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+    "set statusline+=%=%-14.(%l,%c%V%)\ %p%%\ %L  " Right aligned file nav info
+    set statusline+=%=\ \ %5l,%-3c\ %3p%%\ %5L  " row,column percentage total line
 endif
 
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" BufExplorer setting
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" BufExplorer settings
-let g:bufExplorerDefaultHelp=0       " Do not show default help.
-let g:bufExplorerShowRelativePath=1  " Show relative paths.
-let g:bufExplorerSortBy='mru'        " Sort by most recently used.
-let g:bufExplorerSplitRight=0        " Split left.
-let g:bufExplorerSplitVertical=1     " Split vertically.
-let g:bufExplorerSplitVertSize = 30  " Split width
-let g:bufExplorerUseCurrentWindow=1  " Open in new window.
-autocmd BufWinEnter \[Buf\ List\] setl nonumber 
+" autocomplete
+" enable omni completion
+" <C-N>, <C-P>, <C-X><C-O>
+filetype plugin on
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" winmanager setting
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" winmanager settings
-let g:winManagerWindowLayout='BufExplorer|FileExplorer'
-let g:persistentBehaviour=0 "只剩下一个窗口退出Vim
-"let g:AutoOpenWinManager=1
-let g:defaultExplorer=0
-let g:winManagerWidth = 30
-nmap fir :FirstExplorerWindow<cr>
-nmap bot :BottomExplorerWindow<cr>
-nmap wm :WMToggle<cr>
+" auto wrapper at column 72 for git commit message
+au FileType gitcommit set tw=72
 
+" run NERDTreeTabs on console vim startup
+"let g:nerdtree_tabs_open_on_console_startup=1
+nmap <F9> :NERDTreeToggle<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TagList setting
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
-let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
-let Tlist_GainFocus_On_ToggleOpen=1      "打开taglist，焦点跳转到taglist
-"let Tlist_Auto_Open=1                "自动打开taglist
-"let Tlist_Inc_Winwidth=30
-"let Tlist_Sort_Type='name'             "根据名字排序，默认是根据出现的顺序
-nnoremap <silent> <F8> :TlistToggle<CR>
+" recommended configuration for Syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+" always sticks any detected errors into the location list
+let g:syntastic_always_populate_loc_list=1
+" automatically open and/or close the location list, default is 2
+" use :lopen/:lclose to open/close this window.
+let g:syntastic_auto_loc_list=1
+" syntax checks when buffers are first loaded and saved, default is 0
+let g:syntastic_check_on_open=1
+" syntax checks whenever buffers are written to disk, default is 1
+let g:syntastic_check_on_wq=1
+let g:syntastic_cpp_compiler='g++'
+let g:syntastic_cpp_compiler_options='-std=c++11'
 
 
-"Tagbar
-"let g:tagbar_autoshowtag = 1
+" shortcut for tagbar
+nmap <F8> :TagbarToggle<CR>
+" tabbar on left windows
+"let tabbar_left=1
+" tabbar width
+let tabbar_width=32
+" no superfluous help info in tabbar
+let g:tabbar_compact=1
+" setting for generation of ctags lables
+let g:tabbar_type_cpp = {
+    \ 'kinds' : [
+        \ 'c:classes:0:1',
+        \ 'd:macros:0:1',
+        \ 'e:enumerators:0:0',
+        \ 'f:functions:0:1',
+        \ 'g:enumeration:0:1',
+        \ 'l:local:0:1',
+        \ 'm:members:0:1',
+        \ 'n:namespaces:0;1',
+        \ 'p:functions_prototypes:0:1',
+        \ 's:structs:0:1',
+        \ 't:typedefs:0:1',
+        \ 'u:unions:0:1',
+        \ 'v:global:0:1',
+        \ 'x:external:0:1'
+    \ ],
+    \ 'sro'         : '::',
+    \ 'kind2scope'  : {
+        \ 'g' : 'enum',
+        \ 'n' : 'namespace',
+        \ 'c' : 'class',
+        \ 's' : 'struct',
+        \ 'u' : 'union'
+    \ },
+    \ 'scope2kind'  : {
+        \ 'enum'        : 'g',
+        \ 'namespace'   : 'n',
+        \ 'class'       : 'c',
+        \ 'struct'      : 's',
+        \ 'union'       : 'u'
+    \ }
+\ }
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" OmniCppComplete -- depends on ctags
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocp  
-filetype plugin on 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SuperTab
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:SuperTabDefaultCompletionType="context"
+" shortcuts for bufexplorer
+"nnoremap <silent> <F7> :ToggleBufExplorer<CR>
+"nnoremap <silent> <F7> :BufExplorer<CR>
+"nnoremap <silent> <s-F7> :ToggleBufExplorer<CR>
+"nnoremap <silent> <m-F7> :BufExplorerHorizontalSplit<CR>
+"nnoremap <silent> <c-F7> :BufExplorerVerticalSplit<CR>
+
+" DoxygenToolkit.vim
+let g:DoxygenToolkit_authorName="Ben Guan <Ben.Guan@cn.bosch.com>"
+
+
+" setting for vim-indent-guides
+"let g:indent_guides_enable_on_vim_startup=1     " enable when vim starts
+let g:indent_guides_start_level=2               " show visual indent from level 2
+let g:indent_guides_guide_size=1                " color block width
+" on/off visual indent
+nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+
+" Shortcuts to switch between files:
+" Work with buffers
+"nnoremap <C-Tab> :bn<CR>
+"nnoremap <C-S-Tab> :bp<CR>
+" Work with split windows
+"nnoremap <C-Tab> <C-w>w
+"nnoremap <C-S-Tab> <C-w>W
+" One tab for one buffer
+"nnoremap <C-Tab> :tabn<CR>
+"nnoremap <C-Tab> :tabp<CR>
+
+" shortcuts
+"nmap LB 0   " go to line begin
+"nmap LE $   " go to line end
+"nnoremap nw <C-W><C-W>         " iterate windows in turns
+"nnoremap <Leader>lw <C-W>l     " go to right window
+"nnoremap <Leader>hw <C-W>h     " go to left window
+"nnoremap <Leader>kw <C-W>k     " go to upper window
+"nnoremap <Leader>jw <C-W>j     " go to lower window
+
+" switch between *.cpp and *.h, requires 'vim-fswitch'
+nmap <silent> <Leader>sw :FSHere<cr>
+
+" nerdcommenter shortcuts
+" <Leader>cc - comment current line or selected text
+" <Leader>cu - uncomment current line or selected text
+
+" YCM settings
+"nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
+"nnoremap <Leader>jd :YcmCompleter GoToDefinition<CR>
