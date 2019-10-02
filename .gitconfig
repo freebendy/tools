@@ -2,8 +2,11 @@
 	ap = apply
 	br = branch
 	ci = commit
+	cl = clone --recurse-submodules
 	co = checkout
 	cp = cherry-pick
+	df = diff
+	dt = difftool --no-prompt
 	fp = format-patch
 	st = status
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
@@ -11,7 +14,9 @@
 	# show tha added/deleted lines for each files
     #ls = log --numstat --color --decorate
 	ls = log --stat --color --decorate
+	sf = show --name-only
 	show-files = show --name-only
+	su = submodule update --init --recursive
 [user]
 	name = <My Name>
 	email = <My_Email>
@@ -46,8 +51,24 @@
 # 	history-view-vpane-position = 677
 # 	file-view-vpane-position = 912
 # 	show-graph = true
+[difftool "Beyondcompare4"]
+	path = <bc_path>/BComp.exe
+	cmd = <bc_path>/BComp.exe  \"$LOCAL\" \"$REMOTE\"
+[mergetool "Beyondcompare4"]
+	path = <bc_path>/BComp.exe
+	cmd = <bc_path>/BComp.exe  \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 [push]
 	default = nothing
+[pull]
+	rebase = false
+[fetch]
+	prune = true
+[rebase]
+	autoStash = false
+[merge]
+	tool = BeyondCompare4
+[diff]
+	guitool = BeyondCompare4
 [credential]
 	helper = store
 # [sendemail]
@@ -56,3 +77,5 @@
 # 	smtpuser = <your_acount>
 # 	smtppass = <your_password>
 # 	smtpserverport = 587
+[i18n]
+	filesEnconding = utf-8
