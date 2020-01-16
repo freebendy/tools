@@ -17,6 +17,7 @@
 	sf = show --name-only
 	show-files = show --name-only
 	su = submodule update --init --recursive
+	rl = reflog --format='%C(auto)%h%C(reset) %C(magenta)%<|(17)%gd%C(reset) %C(blue)<%cI>%C(reset) %gs %C(auto)%d%Creset'
 [user]
 	name = <My Name>
 	email = <My_Email>
