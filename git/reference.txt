@@ -8,3 +8,9 @@ http://wyj.zhuwo.info/2011/04/git-cherry-pick-merge-rebase/
 
 repo使用
 http://blog.ossxp.com/2010/10/2009/
+
+
+Push all branchs from a remote to another:
+git push newremote refs/remotes/oldremote/*:refs/heads/*
+only push subset:
+git push newremote refs/remotes/oldremote/features/*:refs/heads/features/*

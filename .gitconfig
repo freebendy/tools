@@ -5,17 +5,20 @@
 	cl = clone --recurse-submodules
 	co = checkout
 	cp = cherry-pick
-	df = diff
+	df = diff -w
 	dt = difftool --no-prompt
+	fe = fetch --prune
 	fp = format-patch
 	st = status
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit #--
 	# show tha added/deleted lines for each files
-    #ls = log --numstat --color --decorate
+	#ls = log --numstat --color --decorate
 	ls = log --stat --color --decorate
+	pl = pull --recurse-submodules
 	sf = show --name-only
 	show-files = show --name-only
+	sw = show -w
 	su = submodule update --init --recursive
 	rl = reflog --format='%C(auto)%h%C(reset) %C(magenta)%<|(17)%gd%C(reset) %C(blue)<%cI>%C(reset) %gs %C(auto)%d%Creset'
 [user]
